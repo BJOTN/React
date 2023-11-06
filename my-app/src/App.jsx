@@ -1,7 +1,7 @@
 import { Welcome } from "./Welcome";
 
 export function App() {
-  return <Welcome name = 'Bjorn'/>;
+  return <Welcome name = 'Bjorn'age ={30}/>;
 }
 
 Welcome.defaultProps = {

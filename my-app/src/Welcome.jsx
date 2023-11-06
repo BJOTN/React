@@ -1,3 +1,10 @@
-export function Welcome({ name }) {
-  return <p>Welcome {name}!</p>;
+import { Age } from "./Age";
+
+export function Welcome({ name, age }) {
+  return (
+    <div>
+      <p>Welcome {name}!</p>;
+      <Age age={age} />
+    </div>
+  );
 }
