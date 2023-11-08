@@ -1,11 +1,21 @@
+import { AlertClock } from "./AlertClock";
 import { Welcome } from "./Welcome";
 
 export function App() {
-  return <Welcome name = 'Bjorn'age ={30}/>
+  const handleButtonClick = () => {
+    const currentTime = new Date().toLocaleTimeString();
+    alert(`The time is: ${currentTime}`);
+  };
+
+  return (
+    <div>
+      <h1>Alert Clock Time</h1>
+      <AlertClock onButtonClick ={handleButtonClick}/>
+    </div>
+  )
+  
 }
 
 Welcome.defaultProps = {
   name: "unknow",
 }
-/* -se non passo la prop name in Welcome mi stampa solo welcome senza il nome
-    -mettendo la prop default se non viene specificato il name verrà utilizzato quello di default */
