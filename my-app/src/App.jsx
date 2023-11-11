@@ -1,7 +1,13 @@
+import { Counter } from "./Counter";
 import { Welcome } from "./Welcome";
 
 export function App() {
-  return <Welcome name = 'Bjorn'age ={30}/>
+  return (
+    <div>
+      <h1>Counter App</h1>
+      <Counter initialValue={4} incrementAmount={5} decrementAmount={2} reset ={0}/>
+    </div>
+  );
 }
 
 Welcome.defaultProps = {
