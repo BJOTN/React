@@ -1,9 +1,15 @@
-function MouseClicker({name, nameTwo}){
+function MouseClicker({ name, nameTwo ,imgUrl}) {
     const handleClick = ((event) => {
         console.log(event.currentTarget.name)
     })
-    return (<><button name={name} onClick={handleClick}>click me</button>
-    <button name={nameTwo} onClick={handleClick}>Click me</button>
-    </>)
+    const handleClickImg =((event) => {
+        console.log(event.currentTarget.src)
+    })
+    return (
+        <>
+            <button name={name} onClick={handleClick}><img src={imgUrl} onClick={handleClickImg} /></button>
+            <button name={nameTwo} onClick={handleClick}>Click me</button>
+            
+        </>)
 }
 export default MouseClicker
