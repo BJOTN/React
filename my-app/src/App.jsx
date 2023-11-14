@@ -1,7 +1,8 @@
 import Clock from "./Clock"
+import InteractiveWelcome from "./InteractiveWelcome"
 
 
 function App(){
-    return <Clock />
+    return <InteractiveWelcome />
 }
 export default App
