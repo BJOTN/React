@@ -1,4 +1,4 @@
-const { useState, useEffect } = require("react");
+import { useEffect, useState } from "react"
 
 function Clock (){
     const [currentTime, setCurrentTime] = useState(new Date())
@@ -21,3 +21,4 @@ function Clock (){
         </div>
     )
 }
+export default Clock
