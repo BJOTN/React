@@ -1,6 +1,7 @@
 import Clock from "./Clock"
 import InteractiveWelcome from "./InteractiveWelcome"
 import Login from "./Login"
+import UncontrolledLogin from "./uncontrolledLogin"
 
 
 function App(){
@@ -8,6 +9,6 @@ function App(){
         console.log('Login data:', name,password,remember)
       }
     
-    return <Login onLogin={onLogin}/>
+    return <UncontrolledLogin onLogin={onLogin} />
 }
 export default App

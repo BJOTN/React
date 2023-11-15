@@ -18,8 +18,7 @@ function Login({ onLogin }) {
         setRemember(e.target.checked);
     };
 
-    const handleLoginClick = (e) => {
-        e.preventDefault()
+    const handleLoginClick = () => {
         onLogin(userName, password, remember)
     };
     const handleReset = () => {
@@ -30,7 +29,7 @@ function Login({ onLogin }) {
     const isButtonDisabled = !userName || !password;
 
     return (
-        <form onSubmit={handleLoginClick}>
+        <form>
             <label htmlFor="userName">Username: </label>
             <input type="text" value={userName} id="userName" onChange={handleUserName} />
 
@@ -42,7 +41,7 @@ function Login({ onLogin }) {
                 <input type="checkbox" id="remember" checked={remember} onChange={handleRemember} />
             </label>
 
-            <button type="submit" onClick={handleLoginClick} disabled={isButtonDisabled}>
+            <button type="button" onClick={handleLoginClick} disabled={isButtonDisabled}>
                 Login
             </button>
             <button type="reset" onClick={handleReset} >Reset</button>
