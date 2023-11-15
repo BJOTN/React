@@ -4,6 +4,10 @@ import Login from "./Login"
 
 
 function App(){
-    return <Login />
+    function onLogin(name, password, remember) {
+        console.log('Login data:', name,password,remember)
+      }
+    
+    return <Login onLogin={onLogin}/>
 }
 export default App
