@@ -4,9 +4,15 @@ import InteractiveWelcome from "./InteractiveWelcome"
 import Login from "./Login"
 import UncontrolledLogin from "./uncontrolledLogin"
 import { Counter } from "./Counter"
+import Colors from './Colors';
 
+function App() {
+  const colorArray = [
+    { id: 1, name: 'Blue' },
+    { id: 2, name: 'Red' },
+  ];
 
-function App(){
-    return <Counter/>
+  return <Colors arr={colorArray} />;
 }
-export default App
+
+export default App;
