@@ -6,10 +6,11 @@ import UncontrolledLogin from "./uncontrolledLogin"
 import { Counter } from "./Counter"
 import Colors from './Colors';
 import { TodoList } from "./TodoList"
+import Welcome from "./Welcome"
 
 function App() {
 
-  return <TodoList />;
+  return <Welcome />
 }
 
 export default App;
