@@ -10,7 +10,7 @@ import Welcome from "./Welcome"
 
 function App() {
 
-  return <Welcome />
+  return <Clock />
 }
 
 export default App;
