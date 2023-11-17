@@ -5,14 +5,11 @@ import Login from "./Login"
 import UncontrolledLogin from "./uncontrolledLogin"
 import { Counter } from "./Counter"
 import Colors from './Colors';
+import { TodoList } from "./TodoList"
 
 function App() {
-  const colorArray = [
-    { id: 1, name: 'Blue' },
-    { id: 2, name: 'Red' },
-  ];
 
-  return <Colors arr={colorArray} />;
+  return <TodoList />;
 }
 
 export default App;
