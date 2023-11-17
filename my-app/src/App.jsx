@@ -10,7 +10,7 @@ import Welcome from "./Welcome"
 
 function App() {
 
-  return <Clock />
+  return <TodoList />
 }
 
 export default App;

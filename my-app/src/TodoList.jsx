@@ -1,4 +1,5 @@
 import { useState } from "react"
+import classes from'./todoList.module.scss'
 
 export function TodoList() {
     const [todos, setTodos] = useState([]);
@@ -28,7 +29,7 @@ export function TodoList() {
 
     return (
         <>
-            <ul>
+            <ul className={classes.container}>
                 {todoAll}
             </ul>
             <input 
@@ -40,7 +41,7 @@ export function TodoList() {
             <button onClick={addTodo}>
                 Add to do
             </button>
-            <button onClick={resetTodo}>
+            <button className= {classes.button} onClick={resetTodo}>
                 Reset
             </button>
         </>
