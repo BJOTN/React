@@ -4,7 +4,12 @@ export function TodoList() {
     const [todos, setTodos] = useState([]);
     const [newTodo, setNewTodo] = useState('');
     console.log("Type of todos:", typeof todos);
-    const todoAll = todos.map((todo, index) => <li key={index}>{todo}</li>
+    const delateTodo = (index)=>{
+        const newTodos = [...todos];
+        newTodos.splice(index,1);
+        setTodos(newTodos)
+    }
+    const todoAll = todos.map((todo, index) => <div><li key={index}>{todo}</li> <button onClick={()=>delateTodo(index)}>x</button></div>
     )
     const addTodo = () => {
         if(newTodo != ''){
@@ -19,6 +24,7 @@ export function TodoList() {
         setTodos([]);
         setNewTodo('')
     }
+
 
     return (
         <>
