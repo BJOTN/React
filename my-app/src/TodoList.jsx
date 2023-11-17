@@ -14,6 +14,12 @@ export function TodoList() {
         alert ('write something...')
     }
     }
+
+    const resetTodo = () => {
+        setTodos([]);
+        setNewTodo('')
+    }
+
     return (
         <>
             <ul>
@@ -27,6 +33,9 @@ export function TodoList() {
             </input>
             <button onClick={addTodo}>
                 Add to do
+            </button>
+            <button onClick={resetTodo}>
+                Reset
             </button>
         </>
     )
