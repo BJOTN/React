@@ -7,10 +7,15 @@ import { Counter } from "./Counter"
 import Colors from './Colors';
 import { TodoList } from "./TodoList"
 import Welcome from "./Welcome"
+import Container from "./Container"
 
 function App() {
 
-  return <UncontrolledLogin />
+  return (
+    <Container title={<h1>Hello</h1>}>
+      <p>children</p>
+    </Container>
+  )
 }
 
 export default App;
