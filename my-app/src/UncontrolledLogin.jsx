@@ -16,7 +16,7 @@ function UncontrolledLogin() {
   
     return (
       <div>
-        <h2>Uncontrolled Login</h2>
+        <h2 className="bg-blue-500">Uncontrolled Login</h2>
         <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="username">Username:</label>
