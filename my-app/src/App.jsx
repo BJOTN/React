@@ -10,6 +10,7 @@ import Welcome from "./Welcome"
 import Container from "./Container"
 import { LanguageContext } from "./LanguageContext"
 import { useState } from "react"
+import GithubUser from "./GithubUser"
 
 function App() {
   const [language ,setLanguage] = useState('en');
@@ -18,13 +19,7 @@ function App() {
     setLanguage(newLanguage)
   }
   return (
-    <LanguageContext.Provider value={{language ,changeLanguage}}>
-      <select onChange={(e) => setLanguage(e.target.value)} value={language}>
-        <option value="en">English</option>
-        <option value="it">Italiano</option>
-      </select>
-      <Clock />
-    </LanguageContext.Provider>
+    <GithubUser userName={'BJOTN'}/>
   )
 }
 
