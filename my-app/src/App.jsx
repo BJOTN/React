@@ -11,6 +11,7 @@ import Container from "./Container"
 import { LanguageContext } from "./LanguageContext"
 import { useState } from "react"
 import GithubUser from "./GithubUser"
+import GithubUsers from "./GithubUsers"
 
 function App() {
   const [language ,setLanguage] = useState('en');
@@ -19,7 +20,7 @@ function App() {
     setLanguage(newLanguage)
   }
   return (
-    <GithubUser userName={'BJOTN'}/>
+    <GithubUsers />
   )
 }
 
