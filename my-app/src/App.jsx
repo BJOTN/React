@@ -8,13 +8,23 @@ import Colors from './Colors';
 import { TodoList } from "./TodoList"
 import Welcome from "./Welcome"
 import Container from "./Container"
+import { LanguageContext } from "./LanguageContext"
+import { useState } from "react"
 
 function App() {
-
+  const [language ,setLanguage] = useState('en');
+  
+  const changeLanguage = (newLanguage)=>{
+    setLanguage(newLanguage)
+  }
   return (
-    <Container title={<h1>Hello</h1>}>
-      <p>children</p>
-    </Container>
+    <LanguageContext.Provider value={{language ,changeLanguage}}>
+      <select onChange={(e) => setLanguage(e.target.value)} value={language}>
+        <option value="en">English</option>
+        <option value="it">Italiano</option>
+      </select>
+      <Clock />
+    </LanguageContext.Provider>
   )
 }
 
