@@ -1,5 +1,4 @@
 
-import GithubUser from "./GithubUser";
 import GithubUsers from "./GithubUsers";
 
 
