@@ -1,13 +1,12 @@
 
-import useUserNamePassword from "./useUserNamePassowrd"
+import GithubUser from "./GithubUser";
+import GithubUsers from "./GithubUsers";
+
 
 function App() {
-  const { handleUsernameInput, handlePasswordInput, userData } = useUserNamePassword()
+  
   return (
-    <div>
-      <input type="text" value={userData.userName} onChange={handleUsernameInput} placeholder="Username" />
-      <input type="password" value={userData.password} onChange={handlePasswordInput} placeholder="Password" />
-    </div>
+    <GithubUsers />
   )
 }
 
