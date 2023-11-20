@@ -14,13 +14,10 @@ import GithubUser from "./GithubUser"
 import GithubUsers from "./GithubUsers"
 
 function App() {
-  const [language ,setLanguage] = useState('en');
   
-  const changeLanguage = (newLanguage)=>{
-    setLanguage(newLanguage)
-  }
   return (
-    <GithubUsers />
+  
+    <Counter />
   )
 }
 
