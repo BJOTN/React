@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useRoutes } from "react-router-dom";
 
 export function Counter({ initialValue = 0, incrementAmount = 1, decrementAmount = 1 }) {
-/*   const {initialValue, incrementAmount,decrementAmount }= useRoutes() */
+
   const [counter, setCounter] = useState(initialValue);
   const onIncrement = () => {
     setCounter((c) => c + incrementAmount);
