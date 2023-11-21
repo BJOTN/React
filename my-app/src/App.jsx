@@ -1,5 +1,5 @@
 import { Counter } from "./Counter";
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 
 export function App() {
   return (
