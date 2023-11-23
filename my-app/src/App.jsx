@@ -1,3 +1,4 @@
+import { Clock } from "./Clock";
 import { Counter } from "./Counter";
 
 
@@ -6,6 +7,7 @@ export function App() {
     <div>
       <h1>Counter App</h1>
       <Counter initialValue={0} incrementAmount={2} decrementAmount={1} reset ={0}/>
+      <Clock />
     </div>
   );
 }
