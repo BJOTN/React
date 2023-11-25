@@ -2,20 +2,20 @@ import useGithhubUser from "./useGithubUser"
 
 
 export default function GithubUser({ userName }) {
-    const { userData, isLoading } = useGithhubUser(userName);
+    const { user, isLoading ,error} = useGithhubUser(userName);
   
     return (
       <div>
         {isLoading ? (
           <p>Loading user data...</p>
-        ) : userData ? (
+        ) : user ? (
           <div>
             <h2>User Details</h2>
-            <img src={userData.avatar_url} alt={`${userData.login}'s avatar`} />
-            <p>Name: {userData.name}</p>
-            <p>Login: {userData.login}</p>
+            <img src={user.avatar_url} alt={`${user.login}'s avatar`} />
+            <p>Name: {user.name}</p>
+            <p>Login: {user.login}</p>
           </div>
-        ) : (
+        ) : error(
           <p>User not found</p>
         )}
       </div>
