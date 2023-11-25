@@ -1,9 +1,9 @@
-import useGithhubUser from "./useGithubUser"
+import useGithubUser from "./useGithubUser"
 
 
 export default function GithubUser({ userName }) {
-    const { user, isLoading ,error,handleRefetch} = useGithhubUser(userName);
-  
+    const { user, isLoading ,error,handleRefetch} = useGithubUser(userName);
+
     return (
       <div>
         <button onClick={handleRefetch}>Refresh data</button>
