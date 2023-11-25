@@ -10,7 +10,7 @@ function useGithhubUser(userName) {
     }
 
 
-    const{data,error}= useSWR(`https://api.github.com/users/${userName}`,fetcher)
+    const{data,error}= useSWR(user ? `https://api.github.com/users/${userName}` : null,fetcher)
 
     return {
       user : data,
