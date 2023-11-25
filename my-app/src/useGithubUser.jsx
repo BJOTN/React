@@ -9,14 +9,15 @@ function useGithhubUser(userName) {
       return response.json()
     }
 
+    const handleRefetch = ()=> mutate()
 
-    const{data,error}= useSWR(user ? `https://api.github.com/users/${userName}` : null,fetcher)
+    const{data,error,mutate}= useSWR(`https://api.github.com/users/${userName}`,fetcher)
 
     return {
       user : data,
       error,
       isLoading:!data && !error,
-
+      handleRefetch,
     }
   }
   

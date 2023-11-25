@@ -2,10 +2,11 @@ import useGithhubUser from "./useGithubUser"
 
 
 export default function GithubUser({ userName }) {
-    const { user, isLoading ,error} = useGithhubUser(userName);
+    const { user, isLoading ,error,handleRefetch} = useGithhubUser(userName);
   
     return (
       <div>
+        <button onClick={handleRefetch}>Refresh data</button>
         {isLoading ? (
           <p>Loading user data...</p>
         ) : user ? (
@@ -18,6 +19,7 @@ export default function GithubUser({ userName }) {
         ) : error(
           <p>User not found</p>
         )}
+        
       </div>
     );
   }
