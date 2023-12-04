@@ -42,7 +42,7 @@ function Login({ onLogin }) {
                 <input type="checkbox" id="remember" checked={remember} onChange={handleRemember} />
             </label>
 
-            <button type="submit" onClick={handleLoginClick} disabled={isButtonDisabled}>
+            <button type="submit" disabled={isButtonDisabled}>
                 Login
             </button>
             <button type="reset" onClick={handleReset} >Reset</button>
