@@ -14,17 +14,19 @@ export function Counter({ initialValue = 0, incrementAmount = 1, decrementAmount
 
   }
   const  onReset = () => {
-    setCounter(0)
+    setCounter(initialValue)
   }
 /*   if(setCounter = 1){
     setCounter = 0
   } */
   return (
     <div>
-      <h2>Counter Value: {counter}</h2>
+      <h2>
+        Counter Value: <CounterDisplay count={counter} />
+      </h2>
       <button onClick={onIncrement}>Increment</button>
-      <button onClick = {onDecrement}>Decrement</button>
-      <button onClick = {onReset}>Reset</button>
+      <button onClick={onDecrement}>Decrement</button>
+      <button onClick={onReset}>Reset</button>
     </div>
   );
 }

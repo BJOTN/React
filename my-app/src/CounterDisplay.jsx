@@ -1,13 +1,7 @@
-export function CounterDisplay() {
+export function CounterDisplay({count}) {
   return (
     <div>
-      <h1>Counter App</h1>
-      <Counter
-        initialValue={0}
-        incrementAmount={2}
-        decrementAmount={1}
-        reset={0}
-      />
+      <h2>Counter Value: {count}</h2>;
     </div>
   );
 }
